@@ -26,12 +26,21 @@ public class LineCreator : MonoBehaviour {
 			Vector3 mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			line.SetPosition (vertexCount, mousePos);
 			vertexCount++;
+
+			BoxCollider2D box = gameObject.AddComponent<BoxCollider2D> ();
+			box.transform.position = line.transform.position;
+			box.size = new Vector2 (0.1f, 0.1f);
 		}
 
 		if (Input.GetMouseButtonUp (0)) {
 			mouseDown = false;
 			line.positionCount = 0;
 			vertexCount = 0;
+
+			BoxCollider2D[] colliders = GetComponents<BoxCollider2D> ();
+			foreach (BoxCollider2D box in colliders) {
+				Destroy (box);
+			}
 		}
 	}
 
