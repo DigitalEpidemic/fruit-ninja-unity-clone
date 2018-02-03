@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4490018455852062}
   - component: {fileID: 212634457462448242}
+  - component: {fileID: 50455602867443094}
   m_Layer: 0
   m_Name: fruitCut 2
   m_TagString: Untagged
@@ -40,6 +41,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50455602867443094
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1319242811613332}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!212 &212634457462448242
 SpriteRenderer:
   m_ObjectHideFlags: 1
