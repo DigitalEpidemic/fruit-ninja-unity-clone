@@ -7,7 +7,10 @@ public class LineCreator : MonoBehaviour {
 	int vertexCount = 0;
 	bool mouseDown = false;
 	LineRenderer line;
+
 	public GameObject blast;
+
+	public GameObject splash;
 
 	void Awake () {
 		line = GetComponent<LineRenderer> ();
@@ -79,6 +82,12 @@ public class LineCreator : MonoBehaviour {
 		if (target.gameObject.tag == "Bomb") {
 			GameObject b = Instantiate (blast, target.transform.position, Quaternion.identity) as GameObject;
 			Destroy (b.gameObject, 3f);
+			Destroy (target.gameObject);
+		}
+
+		if (target.gameObject.tag == "Fruit") {
+			GameObject s = Instantiate (splash, new Vector3(target.transform.position.x -1, target.transform.position.y,0), Quaternion.identity) as GameObject;
+			Destroy (s.gameObject, 3f);
 			Destroy (target.gameObject);
 		}
 	}

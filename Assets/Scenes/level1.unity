@@ -307,6 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blast: {fileID: 1340642708314626, guid: d728f16b161e7e443a20f9d64bf994a1, type: 2}
+  splash: {fileID: 1135212527845474, guid: 4b3a0c6881e98f94480dfdb09a7c30ff, type: 2}
 --- !u!4 &1846352361
 Transform:
   m_ObjectHideFlags: 0
