@@ -428,6 +428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruit: {fileID: 1272290560667824, guid: 4ee5fb888739b504683c5fd0db504be5, type: 2}
+  bomb: {fileID: 1971608638913920, guid: eff2d2abee95997469c6cb0050b65d93, type: 2}
   maxX: 7
 --- !u!4 &1923754208
 Transform:

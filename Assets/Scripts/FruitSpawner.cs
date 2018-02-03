@@ -5,6 +5,7 @@ using UnityEngine;
 public class FruitSpawner : MonoBehaviour {
 
 	public GameObject fruit;
+	public GameObject bomb;
 	public float maxX;
 
 	void Start () {
@@ -26,6 +27,10 @@ public class FruitSpawner : MonoBehaviour {
 
 	public void SpawnFruitGroups () {
 		StartCoroutine ("SpawnFruit");
+
+		if (Random.Range (0, 6) > 2) {
+			SpawnBomb ();
+		}
 	}
 
 	IEnumerator SpawnFruit () {
@@ -38,6 +43,14 @@ public class FruitSpawner : MonoBehaviour {
 
 			yield return new WaitForSeconds (0.5f);
 		}
+	}
+
+	void SpawnBomb () {
+		float rand = Random.Range (-maxX, maxX);
+		Vector3 pos = new Vector3 (rand, transform.position.y, 0);
+		GameObject b = Instantiate (bomb, pos, Quaternion.identity) as GameObject;
+		b.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, 15f), ForceMode2D.Impulse);
+		b.GetComponent<Rigidbody2D> ().AddTorque (Random.Range (-50f, 50f));
 	}
 
 } // FruitSpawner
