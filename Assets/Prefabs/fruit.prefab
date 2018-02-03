@@ -24,8 +24,8 @@ GameObject:
   - component: {fileID: 50965570384173288}
   - component: {fileID: 114848192064122882}
   m_Layer: 8
-  m_Name: fruit
-  m_TagString: Untagged
+  m_Name: Fruit
+  m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

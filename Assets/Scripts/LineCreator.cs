@@ -7,6 +7,7 @@ public class LineCreator : MonoBehaviour {
 	int vertexCount = 0;
 	bool mouseDown = false;
 	LineRenderer line;
+	public GameObject blast;
 
 	void Awake () {
 		line = GetComponent<LineRenderer> ();
@@ -73,5 +74,13 @@ public class LineCreator : MonoBehaviour {
 			}
 		}
 	} // Update
+
+	void OnCollisionEnter2D (Collision2D target) {
+		if (target.gameObject.tag == "Bomb") {
+			GameObject b = Instantiate (blast, target.transform.position, Quaternion.identity) as GameObject;
+			Destroy (b.gameObject, 3f);
+			Destroy (target.gameObject);
+		}
+	}
 
 } // LineCreator

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212634457462448242}
   - component: {fileID: 50455602867443094}
   m_Layer: 0
-  m_Name: fruitCut 2
+  m_Name: FruitCut 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

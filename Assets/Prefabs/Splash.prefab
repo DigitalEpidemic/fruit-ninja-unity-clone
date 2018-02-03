@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4777576763567590}
   - component: {fileID: 212323371808451328}
   m_Layer: 0
-  m_Name: splash1
+  m_Name: Splash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
