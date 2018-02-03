@@ -29,6 +29,8 @@ public class FruitScript : MonoBehaviour {
 			c2.GetComponent<Rigidbody2D> ().AddTorque (Random.Range (-2f, 2f), ForceMode2D.Impulse);
 
 			Destroy (gameObject);
+			Destroy (c1, 2f);
+			Destroy (c2, 2f);
 		}
 	}
 

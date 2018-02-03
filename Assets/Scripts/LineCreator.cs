@@ -81,13 +81,13 @@ public class LineCreator : MonoBehaviour {
 	void OnCollisionEnter2D (Collision2D target) {
 		if (target.gameObject.tag == "Bomb") {
 			GameObject b = Instantiate (blast, target.transform.position, Quaternion.identity) as GameObject;
-			Destroy (b.gameObject, 3f);
+			Destroy (b.gameObject, 2f);
 			Destroy (target.gameObject);
 		}
 
 		if (target.gameObject.tag == "Fruit") {
 			GameObject s = Instantiate (splash, new Vector3(target.transform.position.x -1, target.transform.position.y,0), Quaternion.identity) as GameObject;
-			Destroy (s.gameObject, 3f);
+			Destroy (s.gameObject, 2f);
 			Destroy (target.gameObject);
 		}
 	}
