@@ -89,6 +89,9 @@ public class LineCreator : MonoBehaviour {
 			GameObject s = Instantiate (splash, new Vector3(target.transform.position.x -1, target.transform.position.y,0), Quaternion.identity) as GameObject;
 			Destroy (s.gameObject, 2f);
 			Destroy (target.gameObject);
+
+			int rand = Random.Range (100, 150);
+			GameplayController.instance.playerScore += rand;
 		}
 	}
 
